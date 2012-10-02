@@ -40,18 +40,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - 
--(void) push{
-//    self.viewDeckController.leftController = SharedAppDelegate.leftController;
-//    
-//    NestViewController* nestController = [[NestViewController alloc] initWithNibName:@"NestViewController" bundle:nil];
-//    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:nestController];
-//    self.viewDeckController.centerController = navController;
-//    
-//    self.pushButton.enabled = YES;
-//    self.pushButton.layer.opacity = 1;
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
