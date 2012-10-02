@@ -9,19 +9,37 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "IIViewDeckController.h"
+#import "LeftSlideViewController.h"
+#import "ConnectViewController.h"
+#import "DiscoverViewController.h"
 
 @implementation AppDelegate
+
+@synthesize centerController = _viewController;
+@synthesize leftController = _leftController;
+@synthesize tabbarController = _tabbarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
-    } else {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
-    }
-    self.window.rootViewController = self.viewController;
+    
+    self.leftController = [[LeftSlideViewController alloc] initWithNibName:@"LeftSlideViewController" bundle:nil];
+    
+    ViewController *centerController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    ConnectViewController *connctViewController = [[ConnectViewController alloc] initWithNibName:@"ConnectViewController" bundle:nil];
+    DiscoverViewController *discoverViewController = [[DiscoverViewController alloc] initWithNibName:@"DiscoverViewController" bundle:nil];
+    NSArray *tabArray = [NSArray arrayWithObjects:centerController, connctViewController, discoverViewController, nil];
+    
+    self.tabbarController = [[UITabBarController alloc] init];
+    [self.tabbarController setDelegate:self];
+    [self.tabbarController setViewControllers:tabArray];
+    
+    self.centerController = [[UINavigationController alloc] initWithRootViewController:self.tabbarController];
+    IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:self.centerController
+                                                                                    leftViewController:self.leftController];
+    deckController.leftLedge = 100;
+    self.window.rootViewController = deckController;
     [self.window makeKeyAndVisible];
     return YES;
 }

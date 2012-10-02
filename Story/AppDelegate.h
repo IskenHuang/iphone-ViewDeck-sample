@@ -10,10 +10,11 @@
 
 @class ViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) UIViewController *centerController;
+@property (strong, nonatomic) UIViewController *leftController;
+@property (strong, nonatomic) UITabBarController *tabbarController;
 
 @end
