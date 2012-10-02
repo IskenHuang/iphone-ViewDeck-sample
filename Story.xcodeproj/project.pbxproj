@@ -13,6 +13,9 @@
 		764CFF02161B19F400E3E24C /* DiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764CFF00161B19F400E3E24C /* DiscoverViewController.xib */; };
 		764CFF05161B2BB700E3E24C /* StoryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 764CFF04161B2BB600E3E24C /* StoryTableView.m */; };
 		764CFF08161B2FBB00E3E24C /* StoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 764CFF07161B2FBB00E3E24C /* StoryObject.m */; };
+		764CFF0D161B315600E3E24C /* p1.png in Resources */ = {isa = PBXBuildFile; fileRef = 764CFF0A161B315600E3E24C /* p1.png */; };
+		764CFF0E161B315600E3E24C /* p2.png in Resources */ = {isa = PBXBuildFile; fileRef = 764CFF0B161B315600E3E24C /* p2.png */; };
+		764CFF0F161B315600E3E24C /* p3.png in Resources */ = {isa = PBXBuildFile; fileRef = 764CFF0C161B315600E3E24C /* p3.png */; };
 		76832A05161B0E4600B60E1C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76832A04161B0E4600B60E1C /* UIKit.framework */; };
 		76832A07161B0E4600B60E1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76832A06161B0E4600B60E1C /* Foundation.framework */; };
 		76832A09161B0E4600B60E1C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76832A08161B0E4600B60E1C /* CoreGraphics.framework */; };
@@ -56,6 +59,9 @@
 		764CFF04161B2BB600E3E24C /* StoryTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryTableView.m; path = class/StoryTableView.m; sourceTree = "<group>"; };
 		764CFF06161B2FBB00E3E24C /* StoryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryObject.h; path = class/StoryObject.h; sourceTree = "<group>"; };
 		764CFF07161B2FBB00E3E24C /* StoryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryObject.m; path = class/StoryObject.m; sourceTree = "<group>"; };
+		764CFF0A161B315600E3E24C /* p1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p1.png; sourceTree = "<group>"; };
+		764CFF0B161B315600E3E24C /* p2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p2.png; sourceTree = "<group>"; };
+		764CFF0C161B315600E3E24C /* p3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p3.png; sourceTree = "<group>"; };
 		76832A00161B0E4600B60E1C /* Story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Story.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76832A04161B0E4600B60E1C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		76832A06161B0E4600B60E1C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -111,6 +117,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		764CFF09161B304D00E3E24C /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				764CFF0A161B315600E3E24C /* p1.png */,
+				764CFF0B161B315600E3E24C /* p2.png */,
+				764CFF0C161B315600E3E24C /* p3.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		768329F5161B0E4600B60E1C = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +179,7 @@
 				764CFF04161B2BB600E3E24C /* StoryTableView.m */,
 				764CFF06161B2FBB00E3E24C /* StoryObject.h */,
 				764CFF07161B2FBB00E3E24C /* StoryObject.m */,
-				76832A49161B0F8800B60E1C /* Resources */,
+				764CFF09161B304D00E3E24C /* resources */,
 				76832A0B161B0E4600B60E1C /* Supporting Files */,
 			);
 			path = Story;
@@ -211,13 +227,6 @@
 				76832A46161B0F7700B60E1C /* WrapController.m */,
 			);
 			path = ViewDeck;
-			sourceTree = "<group>";
-		};
-		76832A49161B0F8800B60E1C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +308,9 @@
 				76832A4F161B101500B60E1C /* LeftSlideViewController.xib in Resources */,
 				764CFEFD161B190400E3E24C /* ConnectViewController.xib in Resources */,
 				764CFF02161B19F400E3E24C /* DiscoverViewController.xib in Resources */,
+				764CFF0D161B315600E3E24C /* p1.png in Resources */,
+				764CFF0E161B315600E3E24C /* p2.png in Resources */,
+				764CFF0F161B315600E3E24C /* p3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

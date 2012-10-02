@@ -18,7 +18,6 @@
 
 @synthesize centerController = _viewController;
 @synthesize leftController = _leftController;
-@synthesize tabbarController = _tabbarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -31,12 +30,12 @@
     DiscoverViewController *discoverViewController = [[DiscoverViewController alloc] initWithNibName:@"DiscoverViewController" bundle:nil];
     NSArray *tabArray = [NSArray arrayWithObjects:centerController, connctViewController, discoverViewController, nil];
     
-    self.tabbarController = [[UITabBarController alloc] init];
-    [self.tabbarController setDelegate:self];
-    [self.tabbarController setViewControllers:tabArray];
+    UITabBarController *tabbarController = [[UITabBarController alloc] init];
+    [tabbarController setDelegate:self];
+    [tabbarController setViewControllers:tabArray];
     
-    self.centerController = [[UINavigationController alloc] initWithRootViewController:self.tabbarController];
-    IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:self.centerController
+    UINavigationController *naviController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
+    IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:naviController
                                                                                     leftViewController:self.leftController];
     deckController.leftLedge = 100;
     self.window.rootViewController = deckController;

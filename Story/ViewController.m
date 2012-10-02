@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "StoryTableView.h"
 
 @interface ViewController ()
 
@@ -21,6 +22,9 @@
     
     UITabBarItem *item = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:0];
     self.tabBarItem = item;
+    
+    StoryTableView *storyTableView = [[StoryTableView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:storyTableView];
 }
 
 - (void)didReceiveMemoryWarning

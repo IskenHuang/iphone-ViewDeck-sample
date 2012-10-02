@@ -7,6 +7,7 @@
 //
 
 #import "ConnectViewController.h"
+#import "StoryTableView.h"
 
 @interface ConnectViewController ()
 
@@ -21,6 +22,9 @@
         // Custom initialization
         UITabBarItem *item = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:1];
         self.tabBarItem = item;
+        
+        StoryTableView *storyTableView = [[StoryTableView alloc] initWithFrame:self.view.frame];
+        [self.view addSubview:storyTableView];
     }
     return self;
 }
